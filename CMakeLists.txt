@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 project(SDR C CXX)
 
+set(CMAKE_BUILD_TYPE Debug)
+
 find_package(SoapySDR REQUIRED)
 
-add_executable(main src/main.cpp)
-target_link_libraries(main PRIVATE ${SoapySDR_LIBRARIES})
+set(MAIN_SOURCE_FILES src/main.cpp)
+add_executable(main ${MAIN_SOURCE_FILES})
+target_link_libraries(main ${SoapySDR_LIBRARIES})

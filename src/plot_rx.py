@@ -1,18 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from pathlib import Path
 
-path=Path(__file__).resolve().parent.parent/"build"/"txdata.pcm"
-data=np.fromfile(path,dtype="<i2")
+name="../build/rxdata.pcm"
 
-I=data[0::2]
-Q=data[1::2]
-n=np.arange(len(I))
+data=np.fromfile(name,dtype="<i2")
 
-plt.plot(n,I,label="I")
-plt.plot(n,Q,label="Q")
-plt.xlabel("отсчёт")
-plt.ylabel("амплитуда")
-plt.grid()
-plt.legend()
+real=data[0::2].astype(float)
+imag=data[1::2].astype(float)
+count=np.arange(1,len(real)+1)
+iq=real+1j*imag
+
+plt.figure(1)
+plt.plot(count,imag,color="red")
+plt.plot(count,real,color="blue")
+plt.plot(count,np.abs(iq))
 plt.show()

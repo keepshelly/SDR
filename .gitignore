@@ -1,0 +1,21 @@
+# сборка
+/build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Makefile
+# установленные библиотеки
+/install/
+# python
+__pycache__/
+*.pyc
+venv/
+.venv/
+# данные sdr
+*.pcm
+# macos
+.DS_Store
+# vscode
+.vscode/
