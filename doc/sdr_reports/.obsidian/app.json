@@ -1,4 +1,5 @@
 {
-  "attachmentFolderPath": "images",
-  "newLinkFormat": "relative"
+  "attachmentFolderPath": "sdr/doc/sdr_reposts/images/",
+  "newLinkFormat": "absolute",
+  "useMarkdownLinks": true
 }
