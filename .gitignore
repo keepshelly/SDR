@@ -19,3 +19,7 @@ venv/
 .DS_Store
 # vscode
 .vscode/
+# obsidian
+.obsidian/
+# копии записей
+records/
